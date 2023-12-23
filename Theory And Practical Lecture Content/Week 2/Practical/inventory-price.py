@@ -1,4 +1,3 @@
-# Task: Return the total inventory cost of the data
 import csv
 
 def calculate_inventory_cost(csv_file):
