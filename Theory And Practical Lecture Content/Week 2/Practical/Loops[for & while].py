@@ -51,7 +51,6 @@ while True:
 
         print("Back to the beginning!")
         continue
-
     else:
 
         print("I shall cease")
@@ -77,11 +76,14 @@ print("")
 
 # We could simply do :
 
-for output in range(11):
-    print("Why hello there.")
+for item in range(1, 10):
+    print(f"Cycle {item}: Why hello there.")
+
+for item in range(10, 0, -1):
+    print(f"Cycle {item}: Why hello there.")
 
 
-string = "coffee"
+string = "Avengers Assemble!"
 
 for letter in string:
     print(letter)

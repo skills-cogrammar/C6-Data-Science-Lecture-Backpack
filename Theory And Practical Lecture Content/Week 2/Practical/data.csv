@@ -1,0 +1,27 @@
+product_id,product_name,category,quantity_in_stock,unit_price,supplier,manufacturing_date
+101,Widget A,Electronics,50,10.99,ABC Electronics,2022-01-15
+102,Widget B,Apparel,30,19.99,XYZ Clothing,2022-02-22
+103,Widget C,Home Goods,75,5.49,123 Home Supplies,2021-12-05
+104,Widget D,Office Supplies,40,14.99,Office Depot,2022-03-10
+105,Widget E,Toys,60,8.79,Toy Universe,2022-01-30
+106,Widget F,Electronics,25,49.99,Gadget World,2022-02-18
+107,Widget G,Apparel,15,29.99,Fashion Hub,2022-01-05
+108,Widget H,Home Goods,80,7.99,456 Homeware,2021-11-20
+109,Widget I,Office Supplies,35,12.49,Stationery Palace,2022-04-02
+110,Widget J,Toys,45,6.99,Playtime Emporium,2022-03-15
+111,Widget K,Electronics,22,69.99,Tech Haven,2022-04-20
+112,Widget L,Apparel,18,39.99,Chic Trends,2022-03-02
+113,Widget M,Home Goods,65,6.29,789 Home Essentials,2022-02-12
+114,Widget N,Office Supplies,50,9.99,Supplies R Us,2022-01-08
+115,Widget O,Toys,55,12.99,Happy Kids Store,2022-04-05
+116,Widget P,Electronics,28,79.99,Innovate Electronics,2022-02-28
+117,Widget Q,Apparel,20,34.99,Fab Fashion,2022-03-18
+118,Widget R,Home Goods,90,8.49,Home Comforts,2021-12-15
+119,Widget S,Office Supplies,42,11.79,Office Solutions,2022-01-22
+120,Widget T,Toys,40,5.99,Toy Galaxy,2022-03-25
+121,Widget U,Electronics,33,89.99,Tech Trends,2022-04-10
+122,Widget V,Apparel,25,49.99,Style Emporium,2022-02-15
+123,Widget W,Home Goods,70,7.79,Home Harmony,2021-11-28
+124,Widget X,Office Supplies,48,13.49,Smart Supplies,2022-04-15
+125,Widget Y,Toys,48,7.49,Super Toys Mart,2022-03-10
+126,Widget Z,Electronics,20,99.99,Future Gadgets,2022-01-18
