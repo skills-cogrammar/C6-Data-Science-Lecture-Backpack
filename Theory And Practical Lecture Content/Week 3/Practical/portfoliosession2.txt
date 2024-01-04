@@ -1,0 +1,14 @@
+git --version
+git init
+Set your username: git config --global user.name "FIRST_NAME LAST_NAME"
+Set your email address: git config --global user.email "MY_NAME@example.com"
+
+Install github cli
+gh auth login
+select login via browser
+paste one time code in the browser
+Authorize github
+gh repo clone link_to_the_repo
+git push
+git pull
+ 
