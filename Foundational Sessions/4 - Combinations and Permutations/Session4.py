@@ -54,20 +54,34 @@ n = len(char_set)
 
 # User input for permutation
 r_permutation = int(input(f"Enter the number of characters to arrange from the set of {n} characters (permutation): "))
-unique_passwords = calculate_classical_permutation(n, r_permutation)
-print(f"Number of unique arrangements (permutations) of {r_permutation} out of {n} characters: {unique_passwords}")
+unique_arrangements = calculate_classical_permutation(n, r_permutation)
+print(f"Number of unique arrangements (permutations) of {r_permutation} out of {n} characters: {unique_arrangements}")
+
+# Calculate and print the probability for a specific arrangement
+if r_permutation <= n:
+    specific_arrangement = input(f"Enter the specific arrangement of {r_permutation} characters to calculate its probability: ")
+    while len(specific_arrangement) != r_permutation or not is_valid_group(char_set, specific_arrangement):
+        print(f"The specific arrangement must be {r_permutation} characters long and use only characters from the initial set '{char_set}'.")
+        specific_arrangement = input(f"Re-enter the specific arrangement: ")
+    probability_of_arrangement = calculate_probability(unique_arrangements, 1)
+    print(f"Probability of randomly arranging the sequence '{specific_arrangement}': {probability_of_arrangement:.4f}")
+else:
+    print(f"Cannot have more characters in the arrangement than are available in the set.")
+
 
 # User input for combination
 r_combination = int(input(f"Enter the number of characters to choose from the set of {n} characters (combination): "))
-character_groups = calculate_classical_combination(n, r_combination)
-print(f"Number of ways to choose {r_combination} out of {n} characters (combinations): {character_groups}")
+unique_groups = calculate_classical_combination(n, r_combination)
+print(f"Number of unique groups (combinations) of {r_combination} out of {n} characters: {unique_groups}")
 
-# User input for calculating probability of a specific combination
-specific_group = input(f"Enter a specific group of {r_combination} characters to calculate its probability: ")
-while not is_valid_group(char_set, specific_group):
-    print(f"The specific group must consist of characters from the initial set '{char_set}' and not use characters more times than they appear.")
-    specific_group = input(f"Re-enter the specific group of {r_combination} characters: ")
+if r_combination <= n:
+    specific_combination = input(f"Enter the specific group of {r_combination} characters to calculate its probability: ")
+    while not is_valid_group(char_set, specific_combination) or len(specific_combination) != r_combination:
+        print(f"The specific group must be {r_combination} characters long and use only characters from the initial set '{char_set}'.")
+        specific_combination = input(f"Re-enter the specific group: ")
+    probability_of_combination = calculate_probability(unique_groups, 1)
+    print(f"Probability of randomly choosing the group '{specific_combination}': {probability_of_combination:.4f}")
+else:
+    print(f"Cannot have more characters in the group than are available in the set.")
 
-probability_of_group = calculate_probability(character_groups, 1)
-print(f"Probability of randomly choosing the group '{specific_group}': {probability_of_group:.4f}")
 
