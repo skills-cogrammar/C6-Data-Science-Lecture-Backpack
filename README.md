@@ -14,3 +14,5 @@ Your adventure through Data Science is unique, and navigating through this rich 
 ## Example: Charting Your Learning Path 🕵️‍♂️
 
 Looking to revisit the theoretical concepts from Week 3? Simply enter the 'Week 3' directory in the 'Theory and Practical Lecture Content' section. Here, you'll find all the materials from that week's lectures. For a deep dive into a specific foundational topic, head over to the 'Foundational Sessions' section and select the session by its lecture title for targeted learning resources.
+
+This is a test text
