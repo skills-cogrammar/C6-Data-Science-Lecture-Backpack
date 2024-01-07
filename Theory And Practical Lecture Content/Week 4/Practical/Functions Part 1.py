@@ -30,7 +30,7 @@ def addition(x = 5, y = 0):
 num_1 = int(input("Please enter a number : "))
 num_2 = int(input("Please enter a number : "))
 
-total = addition(y = num_2)
+total = addition(y=num_2)
 print(total)
 '''
 '''
@@ -47,8 +47,8 @@ total = addition()
 print(total)
 '''
 
-"""
-def is_even(num):
+'''
+def is_even(num): #Void function
 
     while True:
         if num % 2 == 0:
@@ -58,33 +58,37 @@ def is_even(num):
             print("Your number is NOT even")
             return
 
-test = is_even(num=3)
-print(num)
-"""
+test = is_even(num=4)
+print(test)
 '''
+
 def get_int(display_string = "Please enter a number: "):
     """
     Continues to ask the user for an int, until a valid int is entered.
     """
-
+    
     while True:
         user_input = input(display_string)
 
         try:
-            user_input = int(user_input)
-            return user_input
+            result = int(user_input)
+            return result
         
         except:
             print("Please only enter a number.")
 
 total = 0
 while True:
-    user_choice = get_int("Please enter an int -> ")
+    
+    user_choice = get_int()
 
-    if user_choice == -1:
+    if user_choice == -1 or user_choice == 1:
         break
     
     total += user_choice
 
 print(f"This is the Total: {total}")
-'''
+
+# a=get_int()
+# print(a)
+

@@ -6,6 +6,8 @@ greeting = lambda : print("Why hello there")
 greeting()
 
 
+
+
 # calculates the value of the variable with 2 being added
 add_two = lambda x : x + 2
 print(add_two(5))
@@ -15,6 +17,7 @@ def add_2(x):
     return x + 2
 
 print(add_2(6))
+
 
 # calculates the value of the variable cubed
 cube = lambda y : y ** 3
@@ -42,10 +45,9 @@ show_user = lambda user, user2, user3 : print(f"Welcome:\n{user}\n{user2}\n{user
 show_user("Mr X", "Mr Y", "Mr Z" )
 
 
-
 # regular recursive function
 def factorial(n):
-    print(n)
+    print(f"Value n is {n} in the recursion")
     if n == 1:
         return 1
     
