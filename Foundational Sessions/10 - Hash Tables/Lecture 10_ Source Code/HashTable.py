@@ -116,7 +116,6 @@ print(hashtable.get("Zahra"))
 print(hashtable.get("Thandi"))
 
 
-
             
 
 
