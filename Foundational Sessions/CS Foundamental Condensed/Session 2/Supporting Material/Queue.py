@@ -1,4 +1,4 @@
-from typing import Any, List
+from typing import Any, List, Optional
 
 class Queue:
     """
@@ -6,19 +6,26 @@ class Queue:
 
     Attributes:
     - queue (List[Any]): A list to store the elements of the queue.
+    - queue_size (Optional[int]): The maximum size of the queue, if specified.
+    - pointer_position (int): The position of the pointer indicating the next position to insert an element.
 
     Methods:
-    - __init__(): Initializes an empty queue.
+    - __init__(queue_size: Optional[int] = None) -> None: Initializes an empty queue.
     - enqueue(value: Any) -> None: Adds an element to the rear of the queue.
     - dequeue() -> Any: Removes and returns the element from the front of the queue.
     - peek() -> None: Displays the element at the front of the queue without removing it.
     """
 
-    def __init__(self) -> None:
+    def __init__(self, queue_size: Optional[int] = None) -> None:
         """
         Initializes an empty queue.
+
+        Args:
+        - queue_size (Optional[int]): The maximum size of the queue, if specified.
         """
         self.queue: List[Any] = []
+        self.queue_size: Optional[int] = queue_size
+        self.pointer_position: int = 0
 
     def enqueue(self, value: Any) -> None:
         """
@@ -27,7 +34,13 @@ class Queue:
         Args:
         - value (Any): The value to be added to the queue.
         """
-        self.queue.append(value)
+        if self.queue_size is not None and self.pointer_position < self.queue_size:
+            self.queue.insert(self.pointer_position, value)
+            self.pointer_position += 1
+        elif self.queue_size is None:
+            self.queue.append(value)
+        else:
+            print("List FULL!")
 
     def dequeue(self) -> Any:
         """
@@ -52,7 +65,7 @@ class Queue:
             print("Error: Queue is empty!")
 
 # Create a queue to test the class
-queue = Queue()
+queue = Queue(0)
 
 # Check underflow error
 queue.dequeue()
@@ -63,6 +76,7 @@ queue.enqueue(2)
 queue.enqueue(3)
 queue.enqueue(4)
 queue.enqueue(5)
+queue.enqueue(6)
 queue.peek()
 
 # Remove an element from the queue
