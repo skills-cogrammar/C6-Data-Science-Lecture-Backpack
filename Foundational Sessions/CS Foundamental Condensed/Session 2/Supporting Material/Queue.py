@@ -14,6 +14,7 @@ class Queue:
     - enqueue(value: Any) -> None: Adds an element to the rear of the queue.
     - dequeue() -> Any: Removes and returns the element from the front of the queue.
     - peek() -> None: Displays the element at the front of the queue without removing it.
+    - print_queue() -> None: Prints the elements of the queue.
     """
 
     def __init__(self, queue_size: Optional[int] = None) -> None:
@@ -63,6 +64,12 @@ class Queue:
             print(self.queue[0])
         else:
             print("Error: Queue is empty!")
+
+    def print_queue(self) -> None:
+        """
+        Prints the elements of the queue.
+        """
+        print(self.queue)
 
 # Create a queue to test the class
 queue = Queue(0)
